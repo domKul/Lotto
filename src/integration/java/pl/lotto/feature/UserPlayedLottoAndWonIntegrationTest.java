@@ -1,8 +1,6 @@
 package pl.lotto.feature;
 
 import com.github.tomakehurst.wiremock.client.WireMock;
-import java.time.Duration;
-import java.time.LocalDateTime;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +11,10 @@ import pl.lotto.BaseIntegrationTest;
 import pl.lotto.domain.numbergenerator.WinningNumbersGeneratorFacade;
 import pl.lotto.domain.numbergenerator.WinningNumbersNotFoundException;
 import pl.lotto.domain.numberreceiver.dto.NumberReceiverResponseDto;
+
+import java.time.Duration;
+import java.time.LocalDateTime;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertAll;

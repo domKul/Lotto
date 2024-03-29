@@ -1,8 +1,5 @@
 package pl.lotto.domain.resultchecker;
 
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Set;
 import org.junit.jupiter.api.Test;
 import pl.lotto.domain.numbergenerator.WinningNumbersGeneratorFacade;
 import pl.lotto.domain.numbergenerator.dto.WinningNumbersDto;
@@ -10,6 +7,11 @@ import pl.lotto.domain.numberreceiver.NumberReceiverFacade;
 import pl.lotto.domain.numberreceiver.dto.TicketDto;
 import pl.lotto.domain.resultchecker.dto.PlayersDto;
 import pl.lotto.domain.resultchecker.dto.ResultDto;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Set;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;

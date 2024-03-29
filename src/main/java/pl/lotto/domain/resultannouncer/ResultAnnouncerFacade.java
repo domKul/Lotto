@@ -1,19 +1,17 @@
 package pl.lotto.domain.resultannouncer;
 
-import java.time.Clock;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.Optional;
 import lombok.AllArgsConstructor;
 import pl.lotto.domain.resultannouncer.dto.ResponseDto;
 import pl.lotto.domain.resultannouncer.dto.ResultAnnouncerResponseDto;
 import pl.lotto.domain.resultchecker.ResultCheckerFacade;
 import pl.lotto.domain.resultchecker.dto.ResultDto;
-import static pl.lotto.domain.resultannouncer.MessageResponse.ALREADY_CHECKED;
-import static pl.lotto.domain.resultannouncer.MessageResponse.HASH_DOES_NOT_EXIST_MESSAGE;
-import static pl.lotto.domain.resultannouncer.MessageResponse.LOSE_MESSAGE;
-import static pl.lotto.domain.resultannouncer.MessageResponse.WAIT_MESSAGE;
-import static pl.lotto.domain.resultannouncer.MessageResponse.WIN_MESSAGE;
+
+import java.time.Clock;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Optional;
+
+import static pl.lotto.domain.resultannouncer.MessageResponse.*;
 
 @AllArgsConstructor
 public class ResultAnnouncerFacade {

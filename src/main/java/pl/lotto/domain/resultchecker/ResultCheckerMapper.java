@@ -1,9 +1,10 @@
 package pl.lotto.domain.resultchecker;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import pl.lotto.domain.numberreceiver.dto.TicketDto;
 import pl.lotto.domain.resultchecker.dto.ResultDto;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 class ResultCheckerMapper {
 

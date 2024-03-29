@@ -1,10 +1,10 @@
 package pl.lotto.domain.resultannouncer;
 
-import java.time.Clock;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import pl.lotto.domain.resultchecker.ResultCheckerFacade;
+
+import java.time.Clock;
 
 @Configuration
 class ResultAnnouncerBeanConfiguration {

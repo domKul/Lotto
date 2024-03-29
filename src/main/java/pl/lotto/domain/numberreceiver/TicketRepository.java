@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 import java.util.Collection;
 @Repository
-public interface TicketRepository extends MongoRepository<Ticket,String> {
+interface TicketRepository extends MongoRepository<Ticket,String> {
 
     Collection<Ticket> findAllTicketsByDrawDate(LocalDateTime drawDate);
 

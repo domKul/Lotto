@@ -1,23 +1,21 @@
 package pl.lotto.domain.resultannouncer;
 
-import java.time.Clock;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.util.Set;
 import org.junit.jupiter.api.Test;
 import pl.lotto.domain.resultannouncer.dto.ResponseDto;
 import pl.lotto.domain.resultannouncer.dto.ResultAnnouncerResponseDto;
 import pl.lotto.domain.resultchecker.ResultCheckerFacade;
 import pl.lotto.domain.resultchecker.dto.ResultDto;
+
+import java.time.Clock;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.util.Set;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static pl.lotto.domain.resultannouncer.MessageResponse.ALREADY_CHECKED;
-import static pl.lotto.domain.resultannouncer.MessageResponse.HASH_DOES_NOT_EXIST_MESSAGE;
-import static pl.lotto.domain.resultannouncer.MessageResponse.LOSE_MESSAGE;
-import static pl.lotto.domain.resultannouncer.MessageResponse.WAIT_MESSAGE;
-import static pl.lotto.domain.resultannouncer.MessageResponse.WIN_MESSAGE;
+import static pl.lotto.domain.resultannouncer.MessageResponse.*;
 
 class ResultAnnouncerFacadeTest {
 

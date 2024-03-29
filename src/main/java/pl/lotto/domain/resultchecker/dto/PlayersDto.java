@@ -1,7 +1,8 @@
 package pl.lotto.domain.resultchecker.dto;
 
-import java.util.List;
 import lombok.Builder;
+
+import java.util.List;
 
 @Builder
 public record PlayersDto(

@@ -1,7 +1,5 @@
 package pl.lotto.domain.resultchecker;
 
-import java.util.List;
-import java.util.Set;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import pl.lotto.domain.numbergenerator.WinningNumbersGeneratorFacade;
@@ -10,6 +8,10 @@ import pl.lotto.domain.numberreceiver.NumberReceiverFacade;
 import pl.lotto.domain.numberreceiver.dto.TicketDto;
 import pl.lotto.domain.resultchecker.dto.PlayersDto;
 import pl.lotto.domain.resultchecker.dto.ResultDto;
+
+import java.util.List;
+import java.util.Set;
+
 import static pl.lotto.domain.resultchecker.ResultCheckerMapper.mapPlayersToResults;
 
 @AllArgsConstructor

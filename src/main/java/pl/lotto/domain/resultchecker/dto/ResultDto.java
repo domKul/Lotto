@@ -1,8 +1,9 @@
 package pl.lotto.domain.resultchecker.dto;
 
+import lombok.Builder;
+
 import java.time.LocalDateTime;
 import java.util.Set;
-import lombok.Builder;
 
 @Builder
 public record ResultDto(String hash,

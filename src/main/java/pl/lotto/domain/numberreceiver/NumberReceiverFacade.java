@@ -1,13 +1,15 @@
 package pl.lotto.domain.numberreceiver;
 
+import lombok.AllArgsConstructor;
+import pl.lotto.domain.numberreceiver.dto.NumberReceiverResponseDto;
+import pl.lotto.domain.numberreceiver.dto.TicketDto;
+
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-import lombok.AllArgsConstructor;
-import pl.lotto.domain.numberreceiver.dto.NumberReceiverResponseDto;
-import pl.lotto.domain.numberreceiver.dto.TicketDto;
+
 import static pl.lotto.domain.numberreceiver.ValidationResult.INPUT_SUCCESS;
 
 @AllArgsConstructor
