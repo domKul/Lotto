@@ -3,6 +3,7 @@ package pl.lotto.domain.resultchecker;
 import java.util.List;
 import java.util.Set;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 import pl.lotto.domain.numbergenerator.WinningNumbersGeneratorFacade;
 import pl.lotto.domain.numbergenerator.dto.WinningNumbersDto;
 import pl.lotto.domain.numberreceiver.NumberReceiverFacade;
@@ -12,13 +13,13 @@ import pl.lotto.domain.resultchecker.dto.ResultDto;
 import static pl.lotto.domain.resultchecker.ResultCheckerMapper.mapPlayersToResults;
 
 @AllArgsConstructor
+@Component
 public class ResultCheckerFacade {
 
     WinningNumbersGeneratorFacade winningNumbersGeneratorFacade;
     NumberReceiverFacade numberReceiverFacade;
     PlayerRepository playerRepository;
     WinnersRetriever winnerGenerator;
-
 
     public PlayersDto generateWinners() {
         List<TicketDto> allTicketsByDate = numberReceiverFacade.retrieveAllTicketsByNextDrawDate();
