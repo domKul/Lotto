@@ -10,5 +10,5 @@ interface TicketRepository extends MongoRepository<Ticket,String> {
 
     Collection<Ticket> findAllTicketsByDrawDate(LocalDateTime drawDate);
 
-    Ticket findByHash(String hash);
+
 }

@@ -1,8 +1,9 @@
 package pl.lotto.domain.numberreceiver;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import pl.lotto.domain.numberreceiver.dto.NumberReceiverResponseDto;
 import pl.lotto.domain.numberreceiver.dto.TicketDto;
+import pl.lotto.domain.numberreceiver.exception.NumberReceiverNotFoundException;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
@@ -12,7 +13,7 @@ import java.util.stream.Collectors;
 
 import static pl.lotto.domain.numberreceiver.ValidationResult.INPUT_SUCCESS;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class NumberReceiverFacade {
 
     private final NumberValidator numberValidator;
@@ -73,9 +74,9 @@ public class NumberReceiverFacade {
         return drawDateGenerator.getNextDrawDate();
     }
 
-
     public TicketDto findByHash(String hash) {
-        Ticket ticket = ticketRepository.findByHash(hash);
+        Ticket ticket = ticketRepository.findById(hash)
+                .orElseThrow(()-> new NumberReceiverNotFoundException(hash));
         return TicketDto.builder()
                 .hash(ticket.hash())
                 .numbers(ticket.numbers())
